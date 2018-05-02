@@ -1,9 +1,9 @@
-# react-boilerplate
-Boilerplate ReactJS and antd
+# React boilerplate
+The complete boilerplate using antd
 
 ## Commands
 
-##### Run project:
+##### Run project
 ```
 npm start
 ```
