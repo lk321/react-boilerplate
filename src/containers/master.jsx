@@ -4,29 +4,34 @@ import ReactDOM from 'react-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
 
+import MenuDown from 'component/menu-down';
+
 import 'asset/index.less';
 
 class Master extends Component {
 	render() {
 		return (
 			<Layout className="layout" style={{ height: '100%' }}>
-				<Header>
+				<Header style={{ background: '#fff', boxShadow: '0 1px 4px rgba(0,21,41,.08)' }}>
 					<div className="logo" />
-					<Menu theme="dark" mode="horizontal" defaultSelectedKeys={[ '2' ]} style={{ lineHeight: '64px' }}>
-						<Menu.Item key="1">nav 1</Menu.Item>
-						<Menu.Item key="2">nav 2</Menu.Item>
-						<Menu.Item key="3">nav 3</Menu.Item>
+					<Menu
+						mode="horizontal"
+						defaultSelectedKeys={[ '2' ]}
+						style={{ lineHeight: '63px', display: 'inline-block' }}
+					>
+						<Menu.Item key="1">Home</Menu.Item>
+						<Menu.Item key="2">Dashboard</Menu.Item>
+						<Menu.Item key="3">Contactos</Menu.Item>
 					</Menu>
+					<MenuDown />
 				</Header>
 				<Content style={{ padding: '0 50px' }}>
 					<Breadcrumb style={{ margin: '16px 0' }}>
-						<Breadcrumb.Item>Home</Breadcrumb.Item>
-						<Breadcrumb.Item>List</Breadcrumb.Item>
-						<Breadcrumb.Item>App</Breadcrumb.Item>
+						<Breadcrumb.Item>Dashboard</Breadcrumb.Item>
 					</Breadcrumb>
 					<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
 				</Content>
-				<Footer style={{ textAlign: 'center' }}>Footer ©2018 Created by Antonio</Footer>
+				<Footer style={{ textAlign: 'center' }}>Metrics ©2018 Created by Honda Optima</Footer>
 			</Layout>
 		);
 	}
